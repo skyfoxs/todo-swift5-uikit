@@ -18,6 +18,7 @@
 		FB66E8F22868409F004B1DCF /* TodoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66E8F12868409F004B1DCF /* TodoAppUITestsLaunchTests.swift */; };
 		FB66E8FF2868436A004B1DCF /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66E8FE2868436A004B1DCF /* Todo.swift */; };
 		FB66E901286845DD004B1DCF /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66E900286845DD004B1DCF /* TodoItem.swift */; };
+		FB66E9032869FCA1004B1DCF /* AddNewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66E9022869FCA1004B1DCF /* AddNewItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		FB66E8F12868409F004B1DCF /* TodoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FB66E8FE2868436A004B1DCF /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		FB66E900286845DD004B1DCF /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		FB66E9022869FCA1004B1DCF /* AddNewItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				FB66E8DC2868409F004B1DCF /* Info.plist */,
 				FB66E8FE2868436A004B1DCF /* Todo.swift */,
 				FB66E900286845DD004B1DCF /* TodoItem.swift */,
+				FB66E9022869FCA1004B1DCF /* AddNewItemViewController.swift */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			files = (
 				FB66E901286845DD004B1DCF /* TodoItem.swift in Sources */,
 				FB66E8D32868409D004B1DCF /* ViewController.swift in Sources */,
+				FB66E9032869FCA1004B1DCF /* AddNewItemViewController.swift in Sources */,
 				FB66E8CF2868409D004B1DCF /* AppDelegate.swift in Sources */,
 				FB66E8D12868409D004B1DCF /* SceneDelegate.swift in Sources */,
 				FB66E8FF2868436A004B1DCF /* Todo.swift in Sources */,

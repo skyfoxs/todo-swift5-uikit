@@ -68,7 +68,7 @@
         <!--Add New Item-->
         <scene sceneID="1sc-fT-YHM">
             <objects>
-                <viewController id="cgo-FM-ugo" sceneMemberID="viewController">
+                <viewController id="cgo-FM-ugo" customClass="AddNewItemViewController" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rOu-d0-OU1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,8 +107,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Item" id="CTQ-8L-Hnb">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="G6d-gi-xkt"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="x71-dI-HVH"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="G6d-gi-xkt">
+                            <connections>
+                                <action selector="cancelButtonDidTap:" destination="cgo-FM-ugo" id="Vjm-Fe-FRZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="x71-dI-HVH">
+                            <connections>
+                                <action selector="doneButtonDidTap:" destination="cgo-FM-ugo" id="tNg-01-3g6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPj-Mg-h25" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
