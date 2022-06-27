@@ -16,12 +16,17 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.dequeueReusableCell(withIdentifier: "todoItemCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "todoItemCell", for: indexPath)
+        let item = todo.item(at: indexPath.row)
+        cell.textLabel?.text = item.title
+        cell.accessoryType = item.isDone ? .checkmark : .none
+        return cell
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         todo.add(item: TodoItem(title: "Buy milk"))
         todo.add(item: TodoItem(title: "Learning Swift"))
+        todo.add(item: TodoItem(title: "Download XCode", isDone: true))
     }
 }
