@@ -136,7 +136,7 @@
                             <constraint firstItem="F3x-F8-hCf" firstAttribute="leading" secondItem="yaN-kp-tNK" secondAttribute="leading" constant="20" id="m5D-Zo-80f"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add New Item" id="CTQ-8L-Hnb">
+                    <navigationItem key="navigationItem" title="Add New Item" largeTitleDisplayMode="never" id="CTQ-8L-Hnb">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="G6d-gi-xkt">
                             <connections>
                                 <action selector="cancelButtonDidTap:" destination="cgo-FM-ugo" id="Vjm-Fe-FRZ"/>
@@ -162,8 +162,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qqt-Js-VcN" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zR4-U1-SKW">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="zR4-U1-SKW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
