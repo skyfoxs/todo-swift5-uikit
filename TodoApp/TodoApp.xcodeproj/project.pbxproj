@@ -19,6 +19,7 @@
 		FB66E8FF2868436A004B1DCF /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66E8FE2868436A004B1DCF /* Todo.swift */; };
 		FB66E901286845DD004B1DCF /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66E900286845DD004B1DCF /* TodoItem.swift */; };
 		FB66E9032869FCA1004B1DCF /* AddNewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66E9022869FCA1004B1DCF /* AddNewItemViewController.swift */; };
+		FB66E905286AD4DE004B1DCF /* TodoItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66E904286AD4DE004B1DCF /* TodoItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		FB66E8FE2868436A004B1DCF /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		FB66E900286845DD004B1DCF /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		FB66E9022869FCA1004B1DCF /* AddNewItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewItemViewController.swift; sourceTree = "<group>"; };
+		FB66E904286AD4DE004B1DCF /* TodoItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				FB66E8FE2868436A004B1DCF /* Todo.swift */,
 				FB66E900286845DD004B1DCF /* TodoItem.swift */,
 				FB66E9022869FCA1004B1DCF /* AddNewItemViewController.swift */,
+				FB66E904286AD4DE004B1DCF /* TodoItemTableViewCell.swift */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB66E901286845DD004B1DCF /* TodoItem.swift in Sources */,
+				FB66E905286AD4DE004B1DCF /* TodoItemTableViewCell.swift in Sources */,
 				FB66E8D32868409D004B1DCF /* ViewController.swift in Sources */,
 				FB66E9032869FCA1004B1DCF /* AddNewItemViewController.swift in Sources */,
 				FB66E8CF2868409D004B1DCF /* AppDelegate.swift in Sources */,
