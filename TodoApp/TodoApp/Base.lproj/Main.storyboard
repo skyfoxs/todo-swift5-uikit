@@ -88,7 +88,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Guc-JV-4tM" id="C1s-BU-Vs1"/>
-                        <segue destination="Wpy-h3-KgN" kind="presentation" identifier="openEditItemSegue" id="fpw-Po-fWS"/>
+                        <segue destination="cgo-FM-ugo" kind="show" identifier="openEditItemSegue" id="X5N-4r-4wy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -100,11 +100,11 @@
             <objects>
                 <viewController id="cgo-FM-ugo" customClass="ItemDetailViewController" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rOu-d0-OU1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="F3x-F8-hCf">
-                                <rect key="frame" x="20" y="86" width="374" height="73"/>
+                                <rect key="frame" x="20" y="118" width="374" height="73"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="S45-7H-oUj">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -191,11 +191,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ISz-3Y-AX1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2019" y="115"/>
+            <point key="canvasLocation" x="1993" y="522"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fpw-Po-fWS"/>
+        <segue reference="X5N-4r-4wy"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="check" width="36" height="36"/>

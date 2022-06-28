@@ -18,6 +18,10 @@ class ItemDetailViewController: UIViewController {
     var todoItem: TodoItem?
     weak var delegate: ItemDetailViewControllerDelegate?
 
+    var isInEditMode: Bool {
+        todoItem != nil
+    }
+
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var isDoneSwitch: UISwitch!
 
