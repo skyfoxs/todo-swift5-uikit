@@ -38,6 +38,9 @@
                                                             </constraints>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" image="check"/>
+                                                            <connections>
+                                                                <action selector="checkboxButtonDidTap" destination="zqN-H3-Z1w" eventType="touchUpInside" id="hxe-5G-Sbr"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eR-37-Avg">
                                                             <rect key="frame" x="52" y="0.0" width="308.5" height="44.5"/>

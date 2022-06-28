@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AddNewItemViewControllerDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AddNewItemViewControllerDelegate, TodoItemTableViewCellDelegate {
 
     var todo = Todo()
 
@@ -20,8 +20,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "todoItemCell", for: indexPath) as! TodoItemTableViewCell
         let item = todo.item(at: indexPath.row)
-        cell.configure(item: item)
+        cell.configure(item: item, delegate: self)
         return cell
+    }
+
+    func todoItemTableViewCellDidTapCheckboxButton(cell: TodoItemTableViewCell) {
+        if let indexPath = tableView?.indexPath(for: cell) {
+            todo.item(at: indexPath.row).isDone.toggle()
+            tableView?.reloadRows(at: [indexPath], with: .automatic)
+        }
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
