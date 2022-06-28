@@ -1,5 +1,5 @@
 //
-//  AddNewItemViewController.swift
+//  ItemDetailViewController.swift
 //  TodoApp
 //
 //  Created by Pakornpat Sinjiranon on 27/6/22.
@@ -7,16 +7,16 @@
 
 import UIKit
 
-protocol AddNewItemViewControllerDelegate: AnyObject {
-    func addNewItemViewController(controller: AddNewItemViewController, didAdd item: TodoItem)
-    func addNewItemViewController(controller: AddNewItemViewController, didEdit item: TodoItem)
-    func addNewItemViewControllerDidCancel(controller: AddNewItemViewController)
+protocol ItemDetailViewControllerDelegate: AnyObject {
+    func itemDetailViewController(controller: ItemDetailViewController, didAdd item: TodoItem)
+    func itemDetailViewController(controller: ItemDetailViewController, didEdit item: TodoItem)
+    func itemDetailViewControllerDidCancel(controller: ItemDetailViewController)
 }
 
-class AddNewItemViewController: UIViewController {
+class ItemDetailViewController: UIViewController {
 
     var todoItem: TodoItem?
-    weak var delegate: AddNewItemViewControllerDelegate?
+    weak var delegate: ItemDetailViewControllerDelegate?
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var isDoneSwitch: UISwitch!
@@ -44,15 +44,15 @@ class AddNewItemViewController: UIViewController {
         if let todoItem = todoItem {
             todoItem.title = title
             todoItem.isDone = isDoneSwitch.isOn
-            delegate?.addNewItemViewController(controller: self, didEdit: todoItem)
+            delegate?.itemDetailViewController(controller: self, didEdit: todoItem)
         } else {
             let todoItem = TodoItem(title: title, isDone: isDoneSwitch.isOn)
-            delegate?.addNewItemViewController(controller: self, didAdd: todoItem)
+            delegate?.itemDetailViewController(controller: self, didAdd: todoItem)
         }
     }
 
     @IBAction func cancelButtonDidTap(_ sender: UIBarButtonItem) {
-        delegate?.addNewItemViewControllerDidCancel(controller: self)
+        delegate?.itemDetailViewControllerDidCancel(controller: self)
     }
 
 }

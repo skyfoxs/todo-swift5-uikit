@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TodoListViewController.swift
 //  TodoApp
 //
 //  Created by Pakornpat Sinjiranon on 26/6/22.
@@ -7,12 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AddNewItemViewControllerDelegate, TodoItemTableViewCellDelegate {
+class TodoListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ItemDetailViewControllerDelegate, TodoItemTableViewCellDelegate {
 
     var todo = Todo()
 
     @IBOutlet weak var tableView: UITableView?
 
+    // MARK: - TableView Datasource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         todo.totalItems
     }
@@ -24,6 +25,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
 
+    // MARK: - TodoItemTableViewCellDelegate
     func todoItemTableViewCellDidTapCheckboxButton(cell: TodoItemTableViewCell) {
         if let indexPath = tableView?.indexPath(for: cell) {
             todo.item(at: indexPath.row).isDone.toggle()
@@ -31,6 +33,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
 
+    // MARK: - TableView Delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "openEditItemSegue", sender: todo.item(at: indexPath.row))
@@ -43,7 +46,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
 
-    func addNewItemViewController(controller: AddNewItemViewController, didAdd item: TodoItem) {
+    // MARK: - ItemDetailViewControllerDelegate
+    func itemDetailViewController(controller: ItemDetailViewController, didAdd item: TodoItem) {
         todo.add(item: item)
         if let index = todo.index(of: item) {
             tableView?.insertRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
@@ -51,17 +55,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         controller.dismiss(animated: true, completion: nil)
     }
 
-    func addNewItemViewController(controller: AddNewItemViewController, didEdit item: TodoItem) {
+    func itemDetailViewController(controller: ItemDetailViewController, didEdit item: TodoItem) {
         if let index = todo.index(of: item) {
             tableView?.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
         }
         controller.dismiss(animated: true, completion: nil)
     }
 
-    func addNewItemViewControllerDidCancel(controller: AddNewItemViewController) {
+    func itemDetailViewControllerDidCancel(controller: ItemDetailViewController) {
         controller.dismiss(animated: true, completion: nil)
     }
 
+    // MARK: - Initial
     override func viewDidLoad() {
         super.viewDidLoad()
         todo.add(item: TodoItem(title: "Buy milk"))
@@ -69,15 +74,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         todo.add(item: TodoItem(title: "Download XCode", isDone: true))
     }
 
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "openAddItemSegue" {
             if let nav = segue.destination as? UINavigationController,
-                let controller = nav.topViewController as? AddNewItemViewController {
+                let controller = nav.topViewController as? ItemDetailViewController {
                 controller.delegate = self
             }
         } else if segue.identifier == "openEditItemSegue" {
             if let nav = segue.destination as? UINavigationController,
-                let controller = nav.topViewController as? AddNewItemViewController {
+                let controller = nav.topViewController as? ItemDetailViewController {
                 controller.todoItem = sender as? TodoItem
                 controller.delegate = self
             }
