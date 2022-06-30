@@ -10,7 +10,6 @@ import UIKit
 class TodoListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ItemDetailViewControllerDelegate, TodoItemTableViewCellDelegate, UITableViewDragDelegate, UITableViewDropDelegate {
 
     var todo = Todo()
-    weak var a: Int?
 
     @IBOutlet weak var tableView: UITableView?
 
